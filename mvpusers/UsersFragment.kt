@@ -48,3 +48,4 @@ class UsersFragment : MvpAppCompatFragment(R.layout.view_users), UsersView,
         fun newInstance(): Fragment = UsersFragment()
     }
 }
+

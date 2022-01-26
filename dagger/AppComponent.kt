@@ -14,11 +14,13 @@ import javax.inject.Singleton
         AppModule::class,
         NetworkModule::class,
         CiceroneModule::class,
-        RepositoryModule::class,
+        UserRepositoryModule::class,
         RoomModule::class
     ]
 )
 interface AppComponent {
+
+    fun provideUserComponent(): UserComponent.Builder
 
     @Component.Builder
     interface Builder {
@@ -31,6 +33,5 @@ interface AppComponent {
 
     fun inject(activity: MainActivity)
     fun inject(activity: UsersPresenter)
-    fun inject(activity: UserPresenter)
 
 }

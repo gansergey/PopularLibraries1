@@ -1,5 +1,6 @@
 package com.gaaan.popularlibraries.mvpuser
 
+import com.gaaan.popularlibraries.data.GitHubRepo
 import com.gaaan.popularlibraries.data.GitHubUser
 import moxy.MvpView
 import moxy.viewstate.strategy.SingleStateStrategy
@@ -10,5 +11,6 @@ interface UserView : MvpView {
 
     fun showUser(user: GitHubUser)
     fun showError(message: String)
+    fun showRepositories(repositories: List<GitHubRepo>)
 
 }

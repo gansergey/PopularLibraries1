@@ -1,6 +1,5 @@
 package com.gaaan.popularlibraries.dagger
 import dagger.Module
 
-@Module
-class AppModule {
-}
+@Module (subcomponents = [UserComponent::class])
+class AppModule
